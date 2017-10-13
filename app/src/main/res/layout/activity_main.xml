@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+        <!--现有的头部-->
+        <RelativeLayout
+            android:id="@+id/search_layout"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <!--1：back icon-->
+            <ImageView
+                android:id="@+id/back_icon"
+                android:layout_width="10dp"
+                android:layout_height="17dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="21dp"
+                android:src="@drawable/around_travel_back_icon" />
+
+            <!--2：Search and locate-->
+            <TextView
+                android:id="@+id/header_name_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="13.5dp"
+                android:gravity="center"
+                android:text="周边游"
+                android:textColor="#333333"
+                android:textSize="17dp" />
+
+        </RelativeLayout>
+
+        <!--待上移的头部-->
+        <LinearLayout
+            android:id="@+id/tagView"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10.5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="49dp"
+            android:background="@drawable/common_index_search_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/location_wrap"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/txtLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="上海站"
+                    android:textColor="#008fc9" />
+
+                <!--ctrip.android.tour.business.component.CTTourIconFont
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/down_arrow"
+                    android:textColor="#009FDE"
+                    android:textSize="11.52sp" />-->
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="31dp"
+                android:background="#DDDDDD" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/cttour_search" />
+
+            <TextView
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:cursorVisible="false"
+                android:gravity="center_vertical"
+                android:hint="搜索关键词，目的地与景点"
+                android:textSize="15dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.ctrip.headanimation.AnimationScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="4000dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="4000dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="test" />
+        </LinearLayout>
+    </com.ctrip.headanimation.AnimationScrollView>
+
+</LinearLayout>
